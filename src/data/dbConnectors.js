@@ -3,7 +3,8 @@ import mongoose from 'mongoose';
 // Mongo connection
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/contacts', {
-    useNewUrlParser: true,
+    // useNewUrlParser: true,
+    useMongoClient: true,
 });
 
 const contactSchema = new mongoose.Schema({
